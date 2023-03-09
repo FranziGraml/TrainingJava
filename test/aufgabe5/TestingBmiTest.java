@@ -21,7 +21,26 @@ class TestingBmiTest {
 
     }
 
+    @Test
+    public void bmiClass_underweight(){
+        assertEquals("Underweight", TestingBmi.classify(18));
+    }
 
+    @Test
+    public void bmiClass_normal(){
+        assertEquals("Normal", TestingBmi.classify(21));
+    }
+
+    @Test
+    public void bmiClass_overweight(){
+        assertEquals("Overweight", TestingBmi.classify(28));
+    }
+
+
+    @Test
+    public void bmiClass_else(){
+        assertEquals("Obese", TestingBmi.classify(35));
+    }
 
 
 

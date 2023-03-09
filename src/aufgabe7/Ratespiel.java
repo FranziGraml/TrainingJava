@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class Ratespiel {
 
-    static void rateZahl(int wertebereich){
+    public static void main(String[] args) {
+        rateZahl(100);
+
+    }
+
+    public static void rateZahl(int wertebereich){
         int zufallsZahl = (int)( Math.random()*wertebereich); //Zufallszahl
 
         System.out.println(zufallsZahl); //Aus Kontrollzwecken
@@ -13,20 +18,16 @@ public class Ratespiel {
         System.out.println("Gib eine Zahl zwischen 0 und "+wertebereich+" ein!");
         int eingabe = scanner.nextInt();//Eingabe wird gespeichert
 
-        while (zufallsZahl != eingabe){
+        while (zufallsZahl != eingabe){ //Rate solange bis der Wert "eingabe" gleich ist wie der zufallszahl
             if (zufallsZahl<eingabe){
-                System.out.println("Du liegst falsch! Die zu erratende Zahl ist kleiner");
+                System.out.println("Das ist leider falsch! Die zu erratende Zahl ist kleiner");
             }
             else {
-                System.out.println("Du liegst falsch! Die zu erratende Zahl ist größer");
+                System.out.println("Das ist leider falsch! Die zu erratende Zahl ist größer");
             }
             eingabe = scanner.nextInt();//neuer Rateversuch
         }//Schleifenende
-        System.out.println("Richtig!");//Falls Eingabe richtig
+        System.out.println("Gewonnen!");//Falls Eingabe richtig
     }
 
-
-    public static void main(String[] args) {
-        rateZahl(100);
-    }
 }

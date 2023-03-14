@@ -35,12 +35,20 @@ public class Vektor {
         this.a3 = a3;
     }
 
+    /**
+     *Die Methode addiert zwei Vektorn
+     * @param a
+     * @param b
+     * @return ich bekommen einen neuen Vektor
+     */
     public Vektor add(Vektor a, Vektor b) {
-        double newA1 = a.getA1() + b.getA1();
-        double newA2 = a.getA2() + b.getA2();
-        double newA3 = a.getA3() + b.getA3();
-        Vektor result = new Vektor(newA1, newA2, newA3);
-        return result;
+        // double newA1 = a.getA1() + b.getA1();
+        //double newA2 = a.getA2() + b.getA2();
+        //double newA3 = a.getA3() + b.getA3();
+        //Vektor result = new Vektor(newA1, newA2, newA3);
+        return new Vektor(a.getA1() + b.getA1(),
+                a.getA2() + b.getA2(),
+                a.getA3() + b.getA3());
     }
 
     public Vektor subtract(Vektor a, Vektor b) {

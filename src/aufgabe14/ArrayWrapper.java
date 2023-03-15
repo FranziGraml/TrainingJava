@@ -19,22 +19,41 @@ public class ArrayWrapper {
         this.arr = arr;
     }
 
+
+    /**
+     * Methode für ein neues Element. Falls das Array zu klein ist,soll es sich verdoppeln
+     * @param element
+     */
+
     public void add(int element) {
         if(arr.length == count) {
             arr = Arrays.copyOf(arr, count*2);
         }
-        arr[count] = element;
-        count++;
+        arr[count++] = element;
+
     }
 
+    /**
+     * Die Methode gibt mir den Wert vom Index zurück
+     * @param num
+     * @return
+     */
     public int getElement(int num) {
         return arr[num];
     }
-
+    /**
+     * Methode zur Rückgabe der aktuellen Array größe
+     * @param
+     * @return
+     */
     public int arraySize() {
         return arr.length;
     }
 
+    /**
+     * Methode um zu sehen wieviele elemente sich gerade im Array befinden
+     * @return
+     */
     public int getElementCount() {
         return count;
     }

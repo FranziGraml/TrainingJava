@@ -5,6 +5,7 @@ import aufgabe11.GeometrischesObjekt;
 import aufgabe11.Kreis;
 import aufgabe11.Rechteck;
 import aufgabe13.Person;
+import aufgabe14.ArrayWrapper;
 import aufgabe9.Punkt;
 import aufgabeGeo.Circle;
 import aufgabeGeo.Rectangle;
@@ -19,11 +20,20 @@ public class Main {
     public static void main(String[] args) {
 
 
+        //Aufgabe14
+        ArrayWrapper person = new ArrayWrapper(3);
+        System.out.println(person.getClass());
 
-
-
-
-
+        person.add(1);
+        //System.out.println(person.getElement(0));
+        //System.out.println(person.getElement(1));
+        person.add(3);
+        person.add(4);
+        person.add(5);
+        //System.out.println(person.getElement(1));
+        for (int i = 0; i < person.arraySize(); i++) {
+            System.out.println(person.getElement(i));
+        }
 
         //Aufgabe 9 Punkt!
        /* Punkt p1 = new Punkt(10.0,5);

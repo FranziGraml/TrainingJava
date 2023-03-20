@@ -1,7 +1,9 @@
 package aufgabeGeo;
 
 import aufgabe9.Punkt;
-import sun.security.ec.point.Point;
+
+import java.awt.*;
+//import sun.security.ec.point.Point;
 
 public class Circle implements IGeo  {
 
